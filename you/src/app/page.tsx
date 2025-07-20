@@ -12,7 +12,6 @@ export default function LunchInvitation() {
 
   const handleDownloadPass = async () => {
     let downloadSuccess = false
-    let emailSuccess = false
 
     // 1. Handle PDF Download (independent)
     try {
@@ -224,7 +223,6 @@ The Royal Dining System`,
         }
 
         await emailjs.send(serviceId, templateId, templateParams, publicKey)
-        emailSuccess = true
         console.log("✅ Email sent successfully")
       } else {
         console.log("⚠️ EmailJS not configured - skipping email")
@@ -312,19 +310,24 @@ The Royal Dining System
     <div className="min-h-screen relative overflow-hidden">
       <SparkleBackground />
 
-      {currentPage === "home" && <HomePage onNext={() => setCurrentPage("ask")} />}
+      {currentPage === "home" && (
+      <HomePage onNext={() => setCurrentPage("ask")} />
+      )}
 
       {currentPage === "ask" && (
-        <AskPage
-          onRoyalPass={(location) => {
-            setSelectedLocation(location)
-            setCurrentPage("royal-pass")
-          }}
-        />
+      <AskPage
+        onRoyalPass={(location: string) => {
+        setSelectedLocation(location)
+        setCurrentPage("royal-pass")
+        }}
+      />
       )}
 
       {currentPage === "royal-pass" && (
-        <RoyalPass selectedLocation={selectedLocation} onDownload={handleDownloadPass} />
+      <RoyalPass
+        selectedLocation={selectedLocation}
+        onDownload={handleDownloadPass}
+      />
       )}
     </div>
   )
