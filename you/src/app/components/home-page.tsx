@@ -31,7 +31,7 @@ export default function HomePage({ onNext }: HomePageProps) {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center mt-2">
                 <div className="text-sm md:text-base font-bold text-contrast-accent">Lunch</div>
-                <div className="text-xs md:text-sm text-contrast-accent">O'Clock</div>
+                <div className="text-xs md:text-sm text-contrast-accent">{"O'Clock"}</div>
               </div>
             </div>
 
@@ -56,7 +56,7 @@ export default function HomePage({ onNext }: HomePageProps) {
             animation: "pulse-glow 2s infinite",
           }}
         >
-          <span className="group-hover:animate-wiggle inline-block">Let's Get Lunch? ✨</span>
+          <span className="group-hover:animate-wiggle inline-block">{"Let's Get Lunch? ✨"}</span>
         </button>
       </div>
 

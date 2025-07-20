@@ -108,7 +108,7 @@ export default function AskPage({ onRoyalPass }: AskPageProps) {
               onClick={handleYesClick}
               className="px-8 py-4 bg-primary-accent text-white font-medium text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              Yes, I'll choose
+              {"Yes, I'll choose"}
             </button>
             <button
               onClick={handleNoLocation}
@@ -195,7 +195,7 @@ export default function AskPage({ onRoyalPass }: AskPageProps) {
                 boxShadow: yesButtonScale > 1 ? "0 0 30px rgba(255, 215, 0, 0.6)" : "0 0 20px rgba(255, 215, 0, 0.3)",
               }}
             >
-              ✅ Yes, I'm hungry
+              {"✅ Yes, I'm hungry"}
             </button>
 
             {showNoButton && (
@@ -208,7 +208,7 @@ export default function AskPage({ onRoyalPass }: AskPageProps) {
                     opacity: noButtonScale < 1 ? 0.6 : 1,
                   }}
                 >
-                  ❌ No, I'm full (Maybe later)
+                  {"❌ No, I'm full (Maybe later)"}
                 </button>
 
                 {noClickCount > 0 && (

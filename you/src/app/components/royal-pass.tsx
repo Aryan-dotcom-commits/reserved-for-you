@@ -52,7 +52,7 @@ export default function RoyalPass({ selectedLocation, onDownload }: RoyalPassPro
 
             <div className="mt-8 pt-6 border-t border-primary-accent/30">
               <p className="text-sm text-gray-600 italic">Show this at the café to skip the line.</p>
-              <p className="text-xs text-gray-500 mt-1">(Just kidding... unless you're into that.)</p>
+              <p className="text-xs text-gray-500 mt-1">{"(Just kidding... unless you're into that.)"}</p>
             </div>
           </div>
         </div>
