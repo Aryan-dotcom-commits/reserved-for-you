@@ -45,8 +45,8 @@ export default function RoyalPass({ selectedLocation, onDownload }: RoyalPassPro
               </div>
 
               <div>
-                <p className="text-sm uppercase tracking-wide text-gray-600">The One Awaiting</p>
-                <p className="text-lg font-medium">Your Humble Servant</p>
+                <p className="text-sm uppercase tracking-wide text-gray-600">Your Companion</p>
+                <p className="text-lg font-medium">The One Awaiting</p>
               </div>
             </div>
 
