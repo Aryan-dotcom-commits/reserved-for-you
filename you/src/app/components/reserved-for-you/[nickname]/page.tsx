@@ -10,6 +10,9 @@ export default function LunchInvitation() {
   const [currentPage, setCurrentPage] = useState<"home" | "ask" | "royal-pass">("home")
   const [selectedLocation, setSelectedLocation] = useState("")
 
+  const object = "object"
+  const status = "status"
+
   const handleDownloadPass = async () => {
     let downloadSuccess = false
 
@@ -253,9 +256,9 @@ The Royal Dining System
       }
     } catch (error) {
       console.error("❌ Email failed:", error)
-
+      const isEmailJSError = error && typeof error === "object" && "status" in error
       // Handle specific EmailJS errors
-      if (error && typeof error === "object" && "status" in error) {
+      if (isEmailJSError) {
         const emailError = error as { status: number; text: string }
 
         if (emailError.status === 412) {
