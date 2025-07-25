@@ -255,7 +255,7 @@ export default function PersonalizedInvitation() {
             Invitation Not Found
           </h1>
           <p className="text-gray-600 mb-6">
-            The invitation for "{nickname}" could not be found.
+            The invitation for `{nickname}` could not be found.
           </p>
           <a
             href="/setup"

@@ -255,7 +255,7 @@ The Royal Dining System
         console.log("📧 Opened default email client as fallback")
       }
     } catch (error) {
-      console.error("❌ Email failed:", error)
+      console.error(`❌ Email failed:`, error)
       const isEmailJSError = error && typeof error === "object" && "status" in error
       // Handle specific EmailJS errors
       if (isEmailJSError) {
