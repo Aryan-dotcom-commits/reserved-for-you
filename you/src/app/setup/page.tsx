@@ -104,7 +104,7 @@ export default function SetupPage() {
           <div className="space-y-6">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                What's her name?
+                {`What's her name?`}
               </label>
               <input
                 type="text"
