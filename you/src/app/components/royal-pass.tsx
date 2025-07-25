@@ -6,9 +6,10 @@ import { useRef } from "react"
 interface RoyalPassProps {
   selectedLocation: string
   onDownload: () => void
+  guestName?: string
 }
 
-export default function RoyalPass({ selectedLocation, onDownload }: RoyalPassProps) {
+export default function RoyalPass({ selectedLocation, onDownload, guestName = "Kritika" }: RoyalPassProps) {
   const passRef = useRef<HTMLDivElement>(null)
 
   return (
@@ -31,7 +32,7 @@ export default function RoyalPass({ selectedLocation, onDownload }: RoyalPassPro
             <div className="space-y-4 text-contrast-accent">
               <div>
                 <p className="text-sm uppercase tracking-wide text-gray-600">Guest</p>
-                <p className="text-xl font-serif">Her Royal Highness Kritika</p>
+                <p className="text-xl font-serif">Her Royal Highness {guestName}</p>
               </div>
 
               <div>

@@ -5,9 +5,10 @@ import confetti from "canvas-confetti"
 
 interface AskPageProps {
   onRoyalPass: (location: string) => void
+  availableLocations?: string[]
 }
 
-export default function AskPage({ onRoyalPass }: AskPageProps) {
+export default function AskPage({ onRoyalPass, availableLocations = ["Hot Put Bakes", "Hot and Bakes", "Pizzeria"] }: AskPageProps) {
   const [typewriterText, setTypewriterText] = useState("")
   const [showButtons, setShowButtons] = useState(false)
   const [noButtonScale, setNoButtonScale] = useState(1)
@@ -130,7 +131,7 @@ export default function AskPage({ onRoyalPass }: AskPageProps) {
             Choose your royal dining location:
           </div>
           <div className="space-y-4 mb-8">
-            {["Hot Put Bakes", "Hot and Bakes", "Pizzeria"].map((location) => (
+            {availableLocations.map((location) => (
               <button
                 key={location}
                 onClick={() => handleLocationSelect(location)}

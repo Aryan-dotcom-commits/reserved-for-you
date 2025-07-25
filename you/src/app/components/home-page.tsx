@@ -5,9 +5,10 @@ import { Clock } from "lucide-react"
 
 interface HomePageProps {
   onNext: () => void
+  guestName?: string
 }
 
-export default function HomePage({ onNext }: HomePageProps) {
+export default function HomePage({ onNext, guestName = "Kritika" }: HomePageProps) {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function HomePage({ onNext }: HomePageProps) {
         className={`text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-contrast-accent mb-8 leading-tight">
-          Hey Kritika,
+          Hey {guestName},
           <br />
           <span className="text-primary-accent">guess what time it is?</span>
         </h1>
